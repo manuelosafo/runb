@@ -1,0 +1,112 @@
+.ab-banner-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.ab-banner-content h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#about {
+    text-align: justify;
+}
+
+@media screen and (max-width: 400px) {
+    .ab-banner-content {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .ab-banner-content h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    background-color: #f2f2f2;
+    width: 82%;
+    border-radius: 20px;
+    top: 25px;
+}
+
+.mySlides {
+    display: none;
+    width: 80%;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}

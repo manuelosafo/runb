@@ -1,0 +1,522 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+header {
+  background-color: #ffffff; /* White header background */
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for header */
+  position: relative;
+  width: 100%; /* Make the header span the entire width of the viewport */
+  top: 0; /* Position the header at the top of the viewport */
+  z-index: 1000; /* Ensure the header stays above other content */
+}
+
+.logo-container {
+	color:  #000;
+	font: normal 40px 'Cookie', cursive;
+	margin: 0;
+}
+
+.logo-container img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.logo-container a img {
+  position: relative;
+  left: 15px;
+  width: 75px;
+}
+
+nav {
+width: 100%;
+max-width: 1200px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo-container > a {
+color: #000;
+text-decoration: none;
+font-weight: 700;
+font-size: 26px;
+}
+.navigation-items {
+display: flex;
+gap: 40px;
+}
+.navigation-items > a {
+color: #000;
+text-decoration: none;
+font-weight: 500;
+font-size: 16px;
+transition: .4s ease-in-out;
+}
+.navigation-items > a:hover {
+color: #000;
+}
+
+.hamburger {
+position: relative;
+display: none;
+font-size: 30px;
+font-weight: 800;
+color: #000;
+left: -15px;
+top: -15px;
+}
+@media screen and (max-width:768px) {
+.hamburger {
+  display: flex;
+  cursor: pointer;
+}
+.hamburger #closeHam {
+  display: none;
+}
+.navigation-items {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  background-color: #ffffff;
+  width: 60%;
+  height: calc(100vh - 58px);
+  padding-top: 60px;
+  gap: 10vh;
+}
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.banner-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #1b570e;
+}
+
+.banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-content a {
+    background-color: #0088cc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.banner-content a:hover {
+    background-color: #005580;
+}
+
+/*Scroll images*/
+div.scroll-container {
+    background-color: #2c292f;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 2px;
+    width: 60%;
+  }
+  
+  div.scroll-container img {
+    padding: 2px;
+  }
+
+#our-services{
+  margin-top: 20px;
+}
+
+
+.explore{
+    background-color: #ffffff; /* White footer background */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+}
+
+.furnishing {
+  position: relative;
+  width: 35%;
+  left: 5%;
+  align-items: center;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+  z-index: 100;
+}
+
+.furniture {
+  position: relative;
+  width: 35%;
+  right: 5%;
+  align-items: center;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+}
+
+@media screen and (max-width: 768px) {
+  .explore {
+    flex-direction: column;
+    align-items: center;
+  }
+  .scroll-container{
+    width: 10%;
+  }
+  .furnishing {
+    position: relative;
+    right: 110%;
+  }
+  .furniture {
+    right: -1.25%;
+  }
+  
+}
+
+
+h3, .list {
+  list-style-type: none;
+  text-align: center; /* Center the navigation */
+}
+
+.item {
+  margin-top: 20px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+  width: 50%;
+  height: 200px;
+  align-content: center;
+}
+
+.other-services {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .other-services {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .other-services {
+    padding: 10px;
+  }
+}
+
+/* Footer */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 50%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .copyright{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-company-about {
+    display: none;
+  }
+
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/*Back to top button*/
+/* Style for back-to-top button */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px;  /* Distance from the right side of the viewport */
+  background: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 40px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+}
+
+#back-to-top:hover {
+  background: #0056b3;
+}
+
+#back-to-top i {
+  line-height: 40px;
+}
+
